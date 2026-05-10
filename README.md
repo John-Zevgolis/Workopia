@@ -10,7 +10,7 @@ A real estate web application built with Laravel, inspired by Zillow. Users can 
 
 ```bash
 git clone https://github.com/John-Zevgolis/Workopia.git
-cd LaraZillow
+cd Workopia
 ```
 
 ### 2. Install Dependencies
