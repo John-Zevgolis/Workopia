@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Inertia\Response;
+
+class AuthController extends Controller
+{
+    public function create(): Response {
+        return inertia('Auth/Login');
+    }
+
+    public function store(Request $request): RedirectResponse {
+        if(Auth::attempt($request->validate([
+            'email' => 'required|string|email|max:100',
+            'password' => 'required|string'
+        ]))) {
+            $request->session()->regenerate();
+            return redirect()->intended(route('home'))->with('success', 'You are now logged in!');
+        }
+
+        return back()->withErrors(['email' => 'The provided credentials do not match our records'])->onlyInput('email');
+    }
+
+    public function destroy(Request $request): RedirectResponse {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('home');
+    }
+}
