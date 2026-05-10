@@ -1,6 +1,6 @@
 # 🏠 Workopia
 
-A real estate web application built with Laravel, inspired by Zillow. Users can browse listings, view property details, and interact with a modern UI.
+Α modern, full-stack job board application built with Laravel 13, Inertia.js, and Vue.js. It is designed to provide a seamless experience for both employers looking to post vacancies and candidates searching for their next career move.
 
 ---
 
@@ -53,10 +53,12 @@ npm run dev
 
 ## ✨ Features
 
-* Property listings
-* Property details page
-* Modern UI with responsive design
-* Database seeding with sample data
+* Dynamic Job Listings: Browse and filter job opportunities in real-time with an intuitive interface.
+* Employer Dashboard: A dedicated space for companies to create, manage, and track their job postings (Full CRUD functionality).
+* Single-Page Experience: Powered by Inertia.js and Vue 3, ensuring lightning-fast navigation without page reloads.
+* Email Notifications: Integrated SMTP support for automated transactional emails and notifications.
+* Responsive Design: Fully optimized for mobile, tablet, and desktop using Tailwind CSS.
+* Secure Authentication: Robust user registration and login system with protected routes.
 
 ---
 
