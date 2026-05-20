@@ -9,7 +9,7 @@
             <Link
                 v-else
                 :key="index"
-                class="py-2 px-4 round-md"
+                class="py-2 px-4 rounded-md"
                 :href="link.url"
                 :class="{
                     'bg-blue-900 text-gray-300': link.active,

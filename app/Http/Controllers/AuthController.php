@@ -22,7 +22,7 @@ class AuthController extends Controller
             return redirect()->intended(route('home'))->with('success', 'You are now logged in!');
         }
 
-        return back()->withErrors(['email' => 'The provided credentials do not match our records'])->onlyInput('email');
+        return back()->withErrors(['email' => 'Sorry, those credentials do not match'])->onlyInput('email');
     }
 
     public function destroy(Request $request): RedirectResponse {
